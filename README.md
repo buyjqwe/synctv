@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/synctv-org/docs"><img height="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/synctv-org/docs@main/logo/logo.png"/></a>
-  <p><em>👫A program that allows you to watch movies/live broadcasts together remotely🍿</em></p>
+  <p><em>👫一个可以远程一起看电影/直播的程序🍿</em></p>
     <div>
         <a href="https://goreportcard.com/report/github.com/synctv-org/synctv">
             <img src="https://goreportcard.com/badge/github.com/synctv-org/synctv" alt="latest version" />
@@ -27,54 +27,54 @@
 
 ---
 
-English | [中文](./README-CN.md)
+[English](./README.md) | 中文
 
-# What is SyncTV?
+# 什么是SyncTV?
 
-SyncTV is a program that allows you to watch movies and live broadcasts together remotely. It provides features such as synchronized viewing, live streaming, and chat. With SyncTV, you can watch videos and live broadcasts with friends and family, no matter where they are.
+SyncTV 是一个允许您远程一起观看电影和直播的程序。它提供了同步观影、直播、聊天等功能。使用 SyncTV，您可以与朋友和家人一起观看视频和直播，无论他们在哪里。
 
-SyncTV's synchronized viewing feature ensures that everyone watching the video is at the same point. This means that you can pause, fast forward, rewind, change playback speed, and other operations, and everyone else will be synchronized to the same point.
+SyncTV 的同步观影功能确保所有观看视频的人都在同一点上。这意味着您可以暂停、快进快退、倍速等操作，其他人也会同步到同一点。
 
-# Features
+# 特点
 
-- [x] Synchronized viewing
-  - [x] Videos Sync
-  - [x] Live streaming
-- [x] Theater
-  - [x] Chat
-  - [x] Bullet chat
-- [x] Proxy
-  - [x] Videos proxy
-  - [x] Live proxy
-  - [x] Proxy cache
-- [x] Parse video
+- [x] 同步观看
+  - [x] 视频同步
+  - [x] 直播同步
+- [x] 影院模式
+  - [x] 聊天
+  - [x] 弹幕
+- [x] 代理
+  - [x] 视频代理
+  - [x] 直播代理
+  - [x] 代理缓存
+- [x] 视频解析
   - [x] Alist
   - [x] Bilibili
   - [x] Emby
-- [x] Parse live
-  - [x] Bilibili
-- [x] WebRTC online call
-  - [x] Audio
-  - [ ] Video
-  - [ ] Screen
+- [x] 直播解析
+  - [x] 哔哩哔哩
+- [x] WebRTC 在线通话
+  - [x] 语音
+  - [ ] 视频
+  - [ ] 屏幕共享
 
 ---
 
-# Demo
+# 演示站点
 
 [https://demo.synctv.wiki](https://demo.synctv.wiki)
 
 ---
 
-# Installation
+# 安装方式
 
-## Binary
+## 二进制
 
-You can download the latest binary from [release page](https://github.com/synctv-org/synctv/releases) and install it manually.
+您可以从[发布页面](https://github.com/synctv-org/synctv/releases)下载最新的二进制文件并手动安装。
 
-## Script
+## 一键脚本
 
-You can use the script to install and run SyncTV.
+您可以使用该脚本来安装和运行 SyncTV。
 
 ```bash
 sudo -v ; curl -fsSL https://raw.githubusercontent.com/synctv-org/synctv/main/script/install.sh | sudo bash -s -- -v latest
@@ -82,7 +82,7 @@ sudo -v ; curl -fsSL https://raw.githubusercontent.com/synctv-org/synctv/main/sc
 
 ## Docker
 
-You can also use docker to install and run SyncTV.
+您也可以使用 docker 安装并运行 SyncTV。
 
 ```bash
 docker run -d --name synctv -v /opt/synctv:/root/.synctv -p 8080:8080 synctvorg/synctv
@@ -126,9 +126,9 @@ helm uninstall -n synctv synctv
 
 ---
 
-# Run
+# 运行
 
-`synctv server` to start the server
+`synctv server` 启动服务器
 
 ```bash
 synctv server
@@ -136,44 +136,40 @@ synctv server
 synctv server --data-dir ./
 ```
 
-> Every time it starts, it will check for users with root permissions. If none are found, it will initialize a `root` user with the password `root`. Please change the username and password promptly.
+> 每次启动会检测是否有root权限的用户，如果没有则会初始化一个`root`用户，密码为`root`，请及时修改用户名密码。
 >
-> The user registration function requires the use of any `OAuth2` service, such as `Google`, `Github`, etc. For specific configuration, please refer to [documentation](https://docs.synctv.wiki/#/oauth2).
+> 用户注册功能需要启用任意 `OAuth2` 服务，如 `Google`、`Github` 等等，具体配置请参考[文档](https://docs.synctv.wiki/#/zh-cn/oauth2)。
 
-# Documentation
+# 文档
 
 [https://docs.synctv.wiki](https://docs.synctv.wiki)
 
-# Special sponsors
+# 特别赞助商
 
-- [亚洲云](https://www.asiayun.com) supports the server for the [demo](https://demo.synctv.wiki) site.
-- [SwarmCloud](https://swarmcloud.net/) ¥ 200 and provides video P2P acceleration.
-  - When the server network bandwidth is insufficient, you can consider using P2P video acceleration technology.
-  - If you want to use P2P video acceleration technology for free, you can view the documentation [P2P video acceleration](https://docs.synctv.wiki/#/p2p).
+- [亚洲云](https://www.asiayun.com) 为[演示站](https://demo.synctv.wiki)点提供服务器支持。
+- [SwarmCloud](https://www.cdnbye.com/cn/) ¥ 200 并提供视频P2P加速。
+  - 当服务器网络带宽不足时，可以考虑使用P2P视频加速技术。
+  - 如果你想免费使用P2P视频加速技术，可以查看文档[P2P视频加速](https://docs.synctv.wiki/#/zh-cn/p2p)。
 - [LucasYuYu](https://github.com/LucasYuYu) ¥ 18.88
 - [爱发电用户_5vDc](https://afdian.com/u/48fa38ce0e0211ef944d5254001e7c00) ¥ 228
 - masha
 - [T-rabbit](https://github.com/T-rabbit) ¥ 5
 - 矿神SPK源 ¥ 100
 
-# Contributors
+# 贡献者
 
-Thanks goes to these wonderful people:
+感谢这些出色的人们：
 
-[![Contributors](https://contrib.nn.ci/api?repo=synctv-org/synctv&repo=synctv-org/synctv-web&repo=synctv-org/docs)](https://github.com/synctv-org/synctv/graphs/contributors)
+[![贡献者](https://contrib.nn.ci/api?repo=synctv-org/synctv&repo=synctv-org/synctv-web&repo=synctv-org/docs)](https://github.com/synctv-org/synctv/graphs/contributors)
 
-# License
+# 免责声明
 
-The `SyncTV` is open-source software licensed under the AGPL-3.0 license.
+- 这个程序是一个免费且开源的项目。它旨在播放网络上的视频文件，方便多人共同观看视频和学习golang。
+- 在使用时，请遵守相关法律法规，不要滥用。
+- 该程序仅进行客户端播放视频文件/流量转发，不会拦截、存储或篡改任何用户数据。
+- 在使用该程序之前，您应该了解并承担相应的风险，包括但不限于版权纠纷、法律限制等，这与该程序无关。
+- 如果有任何侵权行为，请通过[电子邮件](mailto:pyh1670605849@gmail.com)与我联系，将及时处理。
 
-# Disclaimer
-
-- This program is a free and open-source project. It aims to play video files on the internet, making it convenient for multiple people to watch videos and learn golang together.
-- Please comply with relevant laws and regulations when using it, and do not abuse it.
-- The program only plays video files/forwards traffic on the client-side and will not intercept, store, or tamper with any user data.
-- Before using the program, you should understand and assume the corresponding risks, including but not limited to copyright disputes, legal restrictions, etc., which are not related to the program.
-- If there is any infringement, please contact me via [email](mailto:pyh1670605849@gmail.com), and it will be dealt with promptly.
-
-# Discussion
+# 讨论
 
 - [Telegram](https://t.me/synctv)
